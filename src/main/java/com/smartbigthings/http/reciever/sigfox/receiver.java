@@ -30,4 +30,6 @@ public class receiver {
         return new ResponseEntity<>(statusdata, HttpStatus.OK);
     }
 
+
+
 }
