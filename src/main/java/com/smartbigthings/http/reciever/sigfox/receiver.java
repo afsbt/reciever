@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/sigfox")
-public class reciever {
+public class receiver {
 
     @ApiOperation(value = "UplinkDataPojo", notes = "receives data input from SigFox Network with device information and device data for further processing")
     @PostMapping(path="/data/uplinkdata" ,consumes="application/json", produces="application/json")

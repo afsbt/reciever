@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class BidirDataPojo {
 
-    private Timestamp recievedTimestamp;
+    private Timestamp receivedTimestamp;
     @ApiModelProperty(value="The Device Name, send by ", required = true)
     private String device;
     @ApiModelProperty(value="Epoch time in seconds, The event timestamp (in seconds since the Unix Epoch)", required = true)

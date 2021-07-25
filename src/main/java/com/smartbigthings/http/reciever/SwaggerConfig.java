@@ -1,6 +1,6 @@
 package com.smartbigthings.http.reciever;
 
-import com.smartbigthings.http.reciever.sigfox.reciever;
+import com.smartbigthings.http.reciever.sigfox.receiver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
@@ -13,7 +13,7 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage(reciever.class.getPackage().getName()))
+                .apis(RequestHandlerSelectors.basePackage(receiver.class.getPackage().getName()))
                 .paths(PathSelectors.any()).build();
     }
 }
