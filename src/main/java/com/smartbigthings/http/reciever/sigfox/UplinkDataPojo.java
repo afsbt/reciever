@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-public class SigfoxDeviceDataPojo {
+public class UplinkDataPojo {
 
     private Timestamp recievedTimestamp;
     @ApiModelProperty(value="The Device Name, send by ", required = true)
@@ -87,7 +87,7 @@ public class SigfoxDeviceDataPojo {
         this.deviceTypeId = deviceTypeId;
     }
 
-    public SigfoxDeviceDataPojo(String device, Float snr, String rssi, String station, Integer time, String deviceTypeId, Map<?, ?> deviceData, Integer seqNumber) {
+    public UplinkDataPojo(String device, Float snr, String rssi, String station, Integer time, String deviceTypeId, Map<?, ?> deviceData, Integer seqNumber) {
         this.device = device;
         this.snr = snr;
         this.rssi = rssi;

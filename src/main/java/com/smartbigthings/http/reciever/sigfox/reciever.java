@@ -12,7 +12,7 @@ public class reciever {
     @ApiOperation(value = "SigfoxDeviceDataPojo", notes = "recieves data input from SigFox Network with device information and device data for further processing")
     @PostMapping(path="/receiver" ,consumes="application/json", produces="application/json")
     @ResponseBody
-    public ResponseEntity<SigfoxDeviceDataPojo> recieveSigfoxDeviceCommunication(@RequestBody SigfoxDeviceDataPojo deviceData) {
+    public ResponseEntity<UplinkDataPojo> recieveSigfoxDeviceCommunication(@RequestBody UplinkDataPojo deviceData) {
         System.out.println(deviceData.toString());
         return new ResponseEntity<>(deviceData, HttpStatus.OK);
     }
