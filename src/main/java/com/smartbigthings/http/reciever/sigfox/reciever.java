@@ -9,12 +9,25 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/sigfox")
 public class reciever {
 
-    @ApiOperation(value = "SigfoxDeviceDataPojo", notes = "recieves data input from SigFox Network with device information and device data for further processing")
-    @PostMapping(path="/receiver" ,consumes="application/json", produces="application/json")
+    @ApiOperation(value = "UplinkDataPojo", notes = "receives data input from SigFox Network with device information and device data for further processing")
+    @PostMapping(path="/data/uplinkdata" ,consumes="application/json", produces="application/json")
     @ResponseBody
-    public ResponseEntity<UplinkDataPojo> recieveSigfoxDeviceCommunication(@RequestBody UplinkDataPojo deviceData) {
-        System.out.println(deviceData.toString());
-        return new ResponseEntity<>(deviceData, HttpStatus.OK);
+    public ResponseEntity<UplinkDataPojo> recieveSigfoxDeviceCommunication(@RequestBody UplinkDataPojo uplinkdata) {
+        return new ResponseEntity<>(uplinkdata, HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "BidirDataPojo", notes = "receives data input from SigFox Network with device information and device data for further processing")
+    @PostMapping(path="/data/bidir" ,consumes="application/json", produces="application/json")
+    @ResponseBody
+    public ResponseEntity<BidirDataPojo> recieveSigfoxDeviceCommunication(@RequestBody BidirDataPojo bidirdata) {
+        return new ResponseEntity<>(bidirdata, HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "StatusServicePojo", notes = "receives data input from SigFox Network with device information and device data for further processing")
+    @PostMapping(path="/status/service" ,consumes="application/json", produces="application/json")
+    @ResponseBody
+    public ResponseEntity<StatusServicePojo> recieveSigfoxDeviceCommunication(@RequestBody StatusServicePojo statusdata) {
+        return new ResponseEntity<>(statusdata, HttpStatus.OK);
     }
 
 }

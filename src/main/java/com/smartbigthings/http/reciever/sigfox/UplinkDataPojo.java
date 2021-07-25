@@ -11,12 +11,19 @@ public class UplinkDataPojo {
     private Timestamp recievedTimestamp;
     @ApiModelProperty(value="The Device Name, send by ", required = true)
     private String device;
+    @ApiModelProperty(value="The Device Name, send by ", required = true)
     private Integer time;
+    @ApiModelProperty(value="The Device Name, send by ", required = true)
     private Integer seqNumber;
+    @ApiModelProperty(value="The Device Name, send by ", required = true)
     private String deviceTypeId;
+    @ApiModelProperty(value="The Device Name, send by ", required = true)
     private Float snr;
+    @ApiModelProperty(value="The Device Name, send by ", required = true)
     private String rssi;
+    @ApiModelProperty(value="The Device Name, send by ", required = true)
     private String station;
+    @ApiModelProperty(value="The Device Name, send by ", required = true)
     private Map<?,?> DeviceData;
 
     public Integer getTime() {
