@@ -12,21 +12,21 @@ public class receiver {
     @ApiOperation(value = "UplinkDataPojo", notes = "receives data input from SigFox Network with device information and device data for further processing")
     @PostMapping(path="/data/uplinkdata" ,consumes="application/json", produces="application/json")
     @ResponseBody
-    public ResponseEntity<UplinkDataPojo> recieveSigfoxDeviceCommunication(@RequestBody UplinkDataPojo uplinkdata) {
+    public ResponseEntity<UplinkDataPojo> receiveSigfoxDeviceCommunication(@RequestBody UplinkDataPojo uplinkdata) {
         return new ResponseEntity<>(uplinkdata, HttpStatus.OK);
     }
 
     @ApiOperation(value = "BidirDataPojo", notes = "receives data input from SigFox Network with device information and device data for further processing")
     @PostMapping(path="/data/bidir" ,consumes="application/json", produces="application/json")
     @ResponseBody
-    public ResponseEntity<BidirDataPojo> recieveSigfoxDeviceCommunication(@RequestBody BidirDataPojo bidirdata) {
+    public ResponseEntity<BidirDataPojo> receiveSigfoxDeviceCommunication(@RequestBody BidirDataPojo bidirdata) {
         return new ResponseEntity<>(bidirdata, HttpStatus.OK);
     }
 
     @ApiOperation(value = "StatusServicePojo", notes = "receives data input from SigFox Network with device information and device data for further processing")
     @PostMapping(path="/status/service" ,consumes="application/json", produces="application/json")
     @ResponseBody
-    public ResponseEntity<StatusServicePojo> recieveSigfoxDeviceCommunication(@RequestBody StatusServicePojo statusdata) {
+    public ResponseEntity<StatusServicePojo> receiveSigfoxDeviceCommunication(@RequestBody StatusServicePojo statusdata) {
         return new ResponseEntity<>(statusdata, HttpStatus.OK);
     }
 
